@@ -1,0 +1,354 @@
+/* golbal rules start */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#50d2c4;
+    --secondry-color:#284554;
+    --therde-color: #f6f6f6;
+    --main-padding: 80px ;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.special-heading{
+    color:var(--main-color);
+    font-size: 100px;
+    font-weight: bolder;
+    margin:0;
+    padding-top: 30px;
+    text-align: center;
+}
+.special-heading + p{
+    text-align: center;
+    margin-top:-19px ;
+    color: var(--secondry-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+@media(max-width:767px){
+    .special-heading{
+        font-size: 70px;
+    }
+    .special-heading + p{
+        font-size: 15px;
+    }
+    .services .serv-content .serv{
+        flex-direction: column;
+        text-align: center;
+    }
+    .services .container .serv .comp{
+        display: none;
+    }
+    .text-contact .open{
+        font-size: 10px;
+        font-weight: 200px;
+
+    }
+    .text-contact .mail{
+        font-size: 5px;
+        font-weight: 30px;
+    }
+    .About-content .colme .sas::before{
+        display: none;
+    }
+    .About-content .colme .sas{
+        display: none;
+    }
+}
+
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+
+}
+@media (min-width:992px){
+    .container{
+        width: 950px;
+    }
+
+}
+@media (min-width:1200px){
+    .container{
+        width: 1150px;
+    }
+}
+/* golbal rules end */
+/* start header */
+header{
+    padding: 20px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    width: 80px;
+}
+header .links {
+    position: relative;
+}
+header .links .icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+}
+header .links .icon span{
+    margin-top: 3px;
+    height: 3px;
+    width: 100%;
+    background-color: var(--secondry-color);
+}
+header .links:hover ul{
+    display: block;
+}
+header .links ul{
+    width: 150px;
+    background-color: var(--main-color);
+    padding: 5px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    transition-duration: 0.5s;
+    display: none;
+    z-index: 4;
+}
+.links ul li:not(:last-child){
+    border-bottom: 3px solid var(--secondry-color);
+}
+.links ul li:hover{
+    padding-left: 15px;
+}
+.links ul li {
+    list-style: none;
+    padding: 5px;
+    transition-duration: 0.5s ;
+}
+.links ul li a{
+    text-decoration: none;
+    color: var(--secondry-color);
+}
+/* end header */
+/* start landing */
+.landing{
+    background-image:url(../imge/adventure-alpine-background-355770.jpg);
+    height: calc(100vh - 72px);
+    background-size: cover;
+    position: relative;
+}
+.landing .intro-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+.intro-text h1{
+    color: var(--main-color);
+    font-weight: bolder;
+    font-size: 60px;
+    margin: 0;
+}
+/* end landing */
+/* start features */
+ 
+.features{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color:var(--therde-color) ;
+  }
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px ,1fr));
+    gap: 20px;
+}
+.features .feat{
+    text-align: center;
+}
+.features .feat i{
+    color: var(--main-color);
+}
+.features .feat h3{
+    color: var(--secondry-color);
+    font-weight: bold;
+}
+.features .feat p{
+    line-height: 1.6;
+    color: #777;
+}
+/* end features */
+/* start services */
+.services{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.services .container{
+    margin-top: 100px;
+}
+.services .serv-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px ,1fr));
+    gap: 20px;
+}
+.services .serv-content .serv{
+    display: flex;
+    margin-bottom: 20px;
+}
+.services .serv-content .serv i{
+    color: var(--main-color);
+    flex-basis: 60px;
+    margin-top: 20px;
+}
+.services .serv-content .serv .text{
+    flex: 1;
+}
+.services .serv-content .serv .imge img{
+    width: 300px;
+    height: 300px;
+   
+}
+.services .serv-content .serv .imge{
+    position: relative;
+    text-align: center;
+}
+.services .serv-content .serv .imge::before{
+    content: '';
+    width: 150px;
+    height: 320px;
+    background-color: var(--secondry-color);
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    z-index: -1;
+}
+/* end services */
+/* portfolio start  */
+
+.portfolio{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--therde-color);
+}
+.portfolio .container{
+    margin-top: 100px;
+}
+ .portfolio .port-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px ,1fr));
+    gap: 20px;
+}
+.portfolio .port-content .carde{
+    background-color: var(--secondry-color);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.portfolio .port-content .carde img{
+    width: 300px;
+    border-radius: 10px;
+    
+}
+.portfolio .port-content .carde .text{
+    text-align: center;
+    line-height: 1.9;
+}
+.portfolio .port-content .carde .text h3{
+    color: var(--main-color);
+}
+.portfolio .port-content .carde .text p{
+    color: white;
+}
+/* portfolio end  */
+/* start About */
+.About{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.About .container{
+    margin-top: 100px;
+}
+.About-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px ,1fr));
+    gap: 30px;
+    text-align: center
+}
+.About-content .colme .sas {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.About-content .colme .sas::before{
+    content: "";
+    width: 100px;
+    height: 200px;
+    border-bottom: solid var(--main-color) 30px;
+    border-left: solid var(--main-color) 90px;
+    position: absolute;
+    top: -36px;
+    right: -86px;
+    z-index: -1;
+}
+.About-content .colme .text{
+    line-height: 1.9;
+    color: var(--secondry-color);
+}
+/* end About */
+/* start contact */
+.contact{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.contact .container{
+    margin-top: 100px;
+}
+.text-contact .open{
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--secondry-color);
+    margin: 0;
+} 
+.text-contact .mail{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+.text-contact  a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.text-contact .social i{
+    margin-left: 10px;
+    color: var(--main-color);
+}
+.text-contact .social{
+    color: var(--secondry-color);
+}
+/* end contact */
+/*start footer*/
+footer{
+    margin-top: 100px;
+    background-color: var(--secondry-color);
+    padding: 20px;
+}
+.foote{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.foote span{
+    color: var(--main-color);
+}
+/*end footer*/
+
